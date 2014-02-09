@@ -1,5 +1,5 @@
 {:frodo/config {:web {:port 3000
-                      :handler-fn sample-project.core/-main}
+                      :handler-fn sample-project.core/make-handler}
                 :nrepl {:port 7888
                         :cljs-repl? true}}
 

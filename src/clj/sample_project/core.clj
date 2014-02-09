@@ -41,6 +41,6 @@
     (resources "/out" {:root "out"}) ; only required in dev build
     ))
 
-(defn -main []
+(defn make-handler []
   (-> (app-routes)
       api))

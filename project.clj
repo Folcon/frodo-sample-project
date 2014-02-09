@@ -47,8 +47,7 @@
 
   :aliases {"dev" ["pdo" "cljsbuild" "auto" "dev," "frodo"]
             "prod" ["pdo" "cljsbuild" "once" "release," "trampoline" "frodo"]}
-  :min-lein-version "2.0.0"
-  :main sample-project.core
-  :profiles {:uberjar {:aot :all}})
+
+  :min-lein-version "2.0.0")
 
 
