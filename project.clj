@@ -7,7 +7,7 @@
 
   :dependencies [[org.clojure/clojure "1.5.1"]
 
-                 [jarohen/nomad "0.6.1"]
+                 [jarohen/nomad "0.6.2"]
                  [jarohen/chord "0.2.2"]
                  [ring/ring-core "1.2.0"]
                  [compojure "1.1.6"]
@@ -20,7 +20,7 @@
 
   :plugins [[lein-pdo "0.1.1"]
             [lein-cljsbuild "1.0.1"]
-            [jarohen/lein-frodo "0.2.9"]
+            [jarohen/lein-frodo "0.2.11"]
             [lein-heroku-deploy "0.1.0"]]
 
   :frodo/config-resource "sample-project-config.edn"
