@@ -19,9 +19,11 @@
                  [om "0.3.6"]]
 
   :plugins [[lein-pdo "0.1.1"]
-            [lein-cljsbuild "1.0.1"]
+            [lein-cljsbuild "1.0.2"]
             [jarohen/lein-frodo "0.2.11"]
             [lein-heroku-deploy "0.1.0"]]
+
+  :hooks [leiningen.cljsbuild]
 
   :frodo/config-resource "sample-project-config.edn"
 
@@ -46,7 +48,7 @@
                                    :pretty-print false}}]}
 
   :aliases {"dev" ["pdo" "cljsbuild" "auto" "dev," "frodo"]
-            "prod" ["pdo" "cljsbuild" "once" "release," "trampoline" "frodo"]}
+            "prod" ["pdo" "cljsbuild" "once" "release," "frodo"]}
 
   :min-lein-version "2.0.0")
 
