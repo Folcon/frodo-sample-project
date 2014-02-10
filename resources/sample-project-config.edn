@@ -1,10 +1,8 @@
-;{:nomad/environments
- ;{"dev"
-  {:frodo/config {:web {:port 3000 ;;#nomad/env-var "PORT"
-                        :handler-fn sample-project.core/-main}
-                  :nrepl {:port 7888
-                          :cljs-repl? true}}}
-  ;"prod"
-  ;{:frodo/config {:web {:port 3000;sample-project.core/port
-  ;                      :handler-fn sample-project.core/-main}
-  ;                :cljs-repl? false}}}}
+{:frodo/config {:web {:port 3000
+                      :handler-fn sample-project.core/make-handler}
+                :nrepl {:port 7888
+                        :cljs-repl? true}}
+
+ :nomad/environments {"prod"
+                      {:frodo/config {:web {:port #nomad/edn-env-var "PORT"}
+                                      :nrepl {:cljs-repl? false}}}}}}

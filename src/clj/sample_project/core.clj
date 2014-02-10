@@ -7,10 +7,7 @@
     [compojure.handler :refer [api]]
     [compojure.route :refer [resources]]
     [hiccup.page :refer [html5 include-js]]
-    [hiccup.element :refer [javascript-tag]]
-    ))
-
-(def port (Integer. (or (System/getenv "PORT") 3000)))
+    [hiccup.element :refer [javascript-tag]]))
 
 (defn index-page []
   (html5
@@ -41,6 +38,6 @@
     (resources "/out" {:root "out"}) ; only required in dev build
     ))
 
-(defn -main []
+(defn make-handler []
   (-> (app-routes)
       api))

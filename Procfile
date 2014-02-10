@@ -1,1 +1,1 @@
-web: lein prod
+web: NOMAD_ENV=prod lein prod
